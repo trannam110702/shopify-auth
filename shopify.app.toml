@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "3f04e1c8a53fa5d03c46a467a6d48c48"
+name = "test-auth-app"
+application_url = "https://proven-attend-barrier-candy.trycloudflare.com"
+embedded = true
+handle = "test-auth-app-10"
+
+[webhooks]
+api_version = "2025-07"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_orders,write_products"
+
+[auth]
+redirect_urls = [
+  "https://proven-attend-barrier-candy.trycloudflare.com/auth/shopify/callback",
+  "https://proven-attend-barrier-candy.trycloudflare.com/authSa/shopify/callback",
+  "https://proven-attend-barrier-candy.trycloudflare.com/auth/shopify/embed/callback",
+  "https://proven-attend-barrier-candy.trycloudflare.com/auth/shopify/embed/callback/updateScopes"
+]
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
