@@ -1,0 +1,23 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "fb50f3ec776ff08554ca56532de00563"
+name = "test-auth-app"
+application_url = "https://ceace9253e79.ngrok-free.app"
+embedded = true
+handle = "test-auth-app-11"
+
+[webhooks]
+api_version = "2025-07"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_orders,write_products"
+
+[auth]
+redirect_urls = ["https://ceace9253e79.ngrok-free.app/auth/callback", "https://ceace9253e79.ngrok-free.app/auth/shopify/callback", "https://ceace9253e79.ngrok-free.app/api/auth/callback"]
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true

@@ -1,0 +1,33 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "4a42aac2b0a960567890d6610c52e896"
+name = "Avada Seo Local 4 - NamTLV"
+application_url = "https://interval-zip-dust-sc.trycloudflare.com"
+embedded = true
+handle = "avada-seo-local-4"
+
+[webhooks]
+api_version = "2024-04"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+use_legacy_install_flow = true
+
+[auth]
+redirect_urls = [
+  "https://interval-zip-dust-sc.trycloudflare.com/auth/shopify/callback",
+  "https://interval-zip-dust-sc.trycloudflare.com/authSa/shopify/callback",
+  "https://interval-zip-dust-sc.trycloudflare.com/auth/shopify/embed/callback",
+  "https://interval-zip-dust-sc.trycloudflare.com/auth/shopify/embed/callback/updateScopes"
+]
+
+[app_proxy]
+url = "https://interval-zip-dust-sc.trycloudflare.com/proxy"
+subpath = "avada-seo"
+prefix = "apps"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
